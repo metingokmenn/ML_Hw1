@@ -9,7 +9,7 @@ Contains the LogisticRegression class with core model functionality.
 #   - sigmoid() method (activation function) +
 #   - forward() method (forward pass)
 #   - predict() method (binary predictions)
-#   - cross_entropy_loss() method (loss calculation)
+#   - cross_entropy_loss() method (loss calculation)  +
 #   - update_weights() method (SGD weight updates)
 
 
@@ -22,17 +22,34 @@ class LogisticRegression:
         
     
     def sigmoid(z):
-    '''
-    
-    Sigmoid fonksiyonu:
-    -------------------
-    Sigmoid fonksiyonu, "S" şeklinde bir eğri üreten matematiksel bir fonksiyondur.
-    Şu şekilde tanımlanır:
-    f(z) = 1 / (1 + exp(-z))
-    burada z, fonksiyona gelen girdidir.
-    Sigmoid fonksiyonu lojistik regresyonda, özelliklerin doğrusal kombinasyonunu olasılığa dönüştürmek için kullanılır.
+        """
+        
+        Sigmoid fonksiyonu:
+        -------------------
+        Sigmoid fonksiyonu, "S" şeklinde bir eğri üreten matematiksel bir fonksiyondur.
+        Şu şekilde tanımlanır:
+        f(z) = 1 / (1 + exp(-z))
+        Argümanlar:
+        z: float -> Sigmoid fonksiyonunun girdisi.
+        Returns:
+        float -> Sigmoid fonksiyonunun çıktısı. (0-1 arasında bir değer)
 
-    '''
+        """
     
-    return 1 / (1 + np.exp(-z))
+        return 1 / (1 + np.exp(-z))
+
+    def cross_entropy_loss(y_target, y_predicted):
+        
+        """
+        Cross-entropy loss fonksiyonu:
+        ------------------------------
+        Şu şekilde tanımlanır:
+        L(y_target, y_predicted) = - (y_target * log(y_predicted) + (1-y_target) * log(1-y_predicted))
+        Argümanlar:
+        y_target: float -> Gerçek değer.
+        y_predicted: float -> Tahmin edilen değer.
+        Returns:
+        float -> Cross-entropy loss fonksiyonunun çıktısı.
+        """
+        return  -1 * (y_target * np.log(y_predicted) + (1-y_target) * np.log(1-y_predicted))
 
