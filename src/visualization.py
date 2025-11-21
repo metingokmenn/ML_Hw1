@@ -26,7 +26,3 @@ def plot_data_distribution(X,y):
     
     plt.show()
     
-    
-X = np.array([1,2,3,4,5])
-y = np.array([3,4,2,1,6])
-plot_data_distribution(X,y)

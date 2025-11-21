@@ -23,3 +23,16 @@ from src.dataset import load_data, split_data
 # 7. Generate and save all plots and results
 
 
+def main():
+    # 1. Load and split data using dataset module
+    data = load_data()
+    train_data, val_data, test_data = split_data(data, TRAIN_RATIO, VAL_RATIO, TEST_RATIO)
+    
+    # 2. Visualize data distribution using visualization module
+    plot_data_distribution(train_data[:, 0], train_data[:, 1])
+    
+    # 3. Initialize model using model module
+
+
+
+main()
