@@ -12,6 +12,8 @@ Contains the LogisticRegression class with core model functionality.
 #   - cross_entropy_loss() method (loss calculation)  +
 #   - update_weights() method (SGD weight updates)
 
+import numpy as np
+
 
 class LogisticRegression:
     def __init__(self, learning_rate=0.01, num_epochs=1000):
