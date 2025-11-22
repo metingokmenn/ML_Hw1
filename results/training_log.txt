@@ -1,0 +1,128 @@
+======================================================================
+Log Dosyası Başlatıldı: 2025-11-22 22:53:09
+Log Yolu: results/training_log.txt
+======================================================================
+
+======================================================================
+               LOGISTIC REGRESSION FROM SCRATCH
+======================================================================
+
+[1/6] Veri yükleniyor ve bölünüyor...
+   Eğitim seti: 60 örnek
+   Doğrulama seti: 20 örnek
+   Test seti: 20 örnek
+
+[2/6] Veri dağılımı görselleştiriliyor...
+Veri dağılım grafiği kaydedildi: results/initial_data_dist.png
+   Grafik kaydedildi: results/initial_data_dist.png
+
+[3/6] Model başlatılıyor...
+   Öğrenme oranı: 0.01
+   Maksimum epoch: 1000
+
+[4/6] Model eğitiliyor (Stochastic Gradient Descent)...
+   Bu işlem biraz zaman alabilir...
+
+Epoch 100/1000 - Train Loss: 0.2298, Val Loss: 0.2590
+Epoch 200/1000 - Train Loss: 0.2195, Val Loss: 0.2408
+Epoch 300/1000 - Train Loss: 0.2170, Val Loss: 0.2343
+
+Overfitting tespit edildi! Epoch 343
+   Validation loss artıyor, training loss azalıyor.
+   Patience: 10/10
+
+Early stopping: Epoch 343
+   Validation loss 10 epoch boyunca iyileşmedi.
+   En iyi model: Epoch 333 (Val Loss: 0.2328)
+   En iyi model ağırlıklarına geri dönülüyor...
+
+Eğitim tamamlandı!
+   Early stopping ile durduruldu.
+   En iyi validation loss: 0.2328 (Epoch 333)
+   Overfitting tespit edildi: Validation loss artışı gözlemlendi.
+
+[5/6] Loss eğrisi görselleştiriliyor...
+Loss eğrisi grafiği kaydedildi: results/loss_curve.png
+   Grafik kaydedildi: results/loss_curve.png
+
+[6/6] Model tüm setler üzerinde değerlendiriliyor...
+
+============================================================
+Training Seti Metrikleri:
+============================================================
+Accuracy  : 0.8667
+Precision : 0.8788
+Recall    : 0.8788
+F1-Score  : 0.8788
+
+Confusion Matrix:
+  True Positive  (TP): 29
+  True Negative  (TN): 23
+  False Positive (FP): 4
+  False Negative (FN): 4
+============================================================
+
+
+============================================================
+Validation Seti Metrikleri:
+============================================================
+Accuracy  : 0.9000
+Precision : 1.0000
+Recall    : 0.8333
+F1-Score  : 0.9091
+
+Confusion Matrix:
+  True Positive  (TP): 10
+  True Negative  (TN): 8
+  False Positive (FP): 0
+  False Negative (FN): 2
+============================================================
+
+
+============================================================
+Test Seti Metrikleri:
+============================================================
+Accuracy  : 0.9000
+Precision : 1.0000
+Recall    : 0.8667
+F1-Score  : 0.9286
+
+Confusion Matrix:
+  True Positive  (TP): 13
+  True Negative  (TN): 5
+  False Positive (FP): 0
+  False Negative (FN): 2
+============================================================
+
+
+[7/7] Test seti tahminleri görselleştiriliyor...
+Test tahmin grafiği kaydedildi: results/test_predictions.png
+Confusion matrix grafiği kaydedildi: results/confusion_matrix.png
+   Grafikler kaydedildi: results/test_predictions.png, results/confusion_matrix.png
+
+======================================================================
+                    FİNAL ÖZET
+======================================================================
+
+Eğitim Özeti:
+  • En iyi validation loss: 0.2328 (Epoch 333)
+  • Final training loss: 0.2165
+  • Final validation loss: 0.2331
+  • Overfitting tespit edildi!
+
+Test Seti Performansı:
+  • Accuracy: 0.9000
+  • Precision: 1.0000
+  • Recall: 0.8667
+  • F1-Score: 0.9286
+
+======================================================================
+Tüm işlemler tamamlandı!
+   Grafikler 'results/' klasörüne kaydedildi:
+   - initial_data_dist.png: Veri dağılımı
+   - loss_curve.png: Loss eğrisi
+   - test_predictions.png: Test tahmin sonuçları
+   - confusion_matrix.png: Confusion matrix
+======================================================================
+
+Tüm loglar 'results/training_log.txt' dosyasına kaydedildi.

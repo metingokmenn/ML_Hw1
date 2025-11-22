@@ -1,8 +1,4 @@
-"""
-Configuration Module
-Contains hyperparameters and project settings.
-"""
-
+import time
 # Data split ratios
 TRAIN_RATIO = 0.6
 VAL_RATIO = 0.2
@@ -13,5 +9,5 @@ LEARNING_RATE = 0.01
 NUM_EPOCHS = 1000
 
 # Other settings
-RANDOM_SEED = 42
+RANDOM_SEED = int(time.time()) % 10000
 

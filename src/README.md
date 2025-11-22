@@ -1,55 +1,78 @@
-# Source Code Structure
+# Kaynak Kod Yapısı
 
-This directory contains the modular implementation of the logistic regression project.
+Bu dizin, logistic regression projesinin modüler implementasyonunu içerir.
 
-## Module Descriptions
+## Modül Açıklamaları
 
 ### `dataset.py`
-Handles all data-related operations:
-- Loading data from CSV files
-- Data preprocessing
-- Splitting data into train/validation/test sets (60/20/20)
+
+Tüm veri ile ilgili işlemleri yönetir:
+
+- CSV dosyalarından veri yükleme
+- Veri ön işleme
+- Veriyi train/validation/test setlerine ayırma (60/20/20)
 
 ### `model.py`
-Contains the core LogisticRegression model class:
-- Sigmoid activation function
-- Forward pass
-- Prediction method
-- Cross-entropy loss calculation
-- Weight update logic (SGD)
+
+Ana LogisticRegression model sınıfını içerir:
+
+- Sigmoid aktivasyon fonksiyonu
+- Forward pass (ileri geçiş)
+- Tahmin metodu
+- Cross-entropy loss hesaplama
+- Ağırlık güncelleme mantığı (SGD)
 
 ### `train.py`
-Implements the training loop:
-- Training function with SGD
-- Loss tracking
-- Training history management
+
+Eğitim döngüsünü implemente eder:
+
+- SGD ile eğitim fonksiyonu
+- Loss takibi
+- Eğitim geçmişi yönetimi
+- Early stopping ve overfitting kontrolü
 
 ### `eval.py`
-Handles model evaluation:
-- Evaluation on datasets
-- Metric calculations
-- Results aggregation
+
+Model değerlendirmesini yönetir:
+
+- Veri setleri üzerinde değerlendirme
+- Metrik hesaplamaları
+- Sonuç toplama ve raporlama
 
 ### `metrics.py`
-Contains metric calculation functions:
-- Accuracy
-- Precision
-- Recall
+
+Metrik hesaplama fonksiyonlarını içerir:
+
+- Accuracy (Doğruluk)
+- Precision (Kesinlik)
+- Recall (Duyarlılık)
 - F-Score
 
 ### `visualization.py`
-Plotting and visualization functions:
-- Data distribution plots
-- Loss curve plots
-- Result visualizations
+
+Grafik ve görselleştirme fonksiyonları:
+
+- Veri dağılımı grafikleri
+- Loss eğrisi grafikleri
+- Test tahmin görselleştirmeleri
+- Confusion matrix görselleştirmesi
 
 ### `config.py`
-Project configuration and hyperparameters:
-- Data split ratios
-- Learning rate
-- Number of epochs
+
+Proje konfigürasyonu ve hyperparameter'lar:
+
+- Veri bölme oranları
+- Öğrenme oranı (learning rate)
+- Epoch sayısı
 - Random seed
 
 ### `utils.py`
-General utility functions used across modules.
 
+Modüller arasında kullanılan genel yardımcı fonksiyonlar:
+
+- Loglama sistemi (Tee sınıfı)
+- Konsol çıktısını dosyaya yazdırma
+
+### `data_loader.py`
+
+Alternatif veri yükleme modülü (dataset.py'den fonksiyonları yeniden export eder).

@@ -1,0 +1,68 @@
+======================================================================
+Log Dosyası Başlatıldı: 2025-11-22 22:48:48
+Log Yolu: results/evaluation_log.txt
+======================================================================
+
+============================================================
+Model Değerlendirmesi Başlatılıyor...
+============================================================
+
+1. Veri yükleniyor...
+
+2. Model yükleniyor...
+   ⚠️  Not: Bu örnekte model yeniden eğitilmedi.
+   Gerçek kullanımda kaydedilmiş model ağırlıkları yüklenmelidir.
+
+3. Model değerlendiriliyor...
+
+============================================================
+Training Seti Metrikleri:
+============================================================
+Accuracy  : 0.5833
+Precision : 0.7000
+Recall    : 0.5676
+F1-Score  : 0.6269
+
+Confusion Matrix:
+  True Positive  (TP): 21
+  True Negative  (TN): 14
+  False Positive (FP): 9
+  False Negative (FN): 16
+============================================================
+
+
+============================================================
+Validation Seti Metrikleri:
+============================================================
+Accuracy  : 0.8000
+Precision : 0.8333
+Recall    : 0.8333
+F1-Score  : 0.8333
+
+Confusion Matrix:
+  True Positive  (TP): 10
+  True Negative  (TN): 6
+  False Positive (FP): 2
+  False Negative (FN): 2
+============================================================
+
+
+============================================================
+Test Seti Metrikleri:
+============================================================
+Accuracy  : 0.8000
+Precision : 0.8889
+Recall    : 0.7273
+F1-Score  : 0.8000
+
+Confusion Matrix:
+  True Positive  (TP): 8
+  True Negative  (TN): 8
+  False Positive (FP): 1
+  False Negative (FN): 3
+============================================================
+
+
+✅ Değerlendirme tamamlandı!
+
+✅ Tüm loglar 'results/evaluation_log.txt' dosyasına kaydedildi.
