@@ -50,15 +50,15 @@ def evaluate(model, X, y, set_name="Dataset"):
     print(f"\n{'='*60}")
     print(f"{set_name} Seti Metrikleri:")
     print(f"{'='*60}")
-    print(f"Accuracy  : {metrics['accuracy']:.4f}")
-    print(f"Precision : {metrics['precision']:.4f}")
-    print(f"Recall    : {metrics['recall']:.4f}")
-    print(f"F1-Score  : {metrics['f1_score']:.4f}")
-    print(f"\nConfusion Matrix:")
-    print(f"  True Positive  (TP): {metrics['true_positive']}")
-    print(f"  True Negative  (TN): {metrics['true_negative']}")
-    print(f"  False Positive (FP): {metrics['false_positive']}")
-    print(f"  False Negative (FN): {metrics['false_negative']}")
+    print(f"Doğruluk (Accuracy)  : {metrics['accuracy']:.4f}")
+    print(f"Kesinlik (Precision) : {metrics['precision']:.4f}")
+    print(f"Duyarlılık (Recall)  : {metrics['recall']:.4f}")
+    print(f"F1-Skoru (F1-Score) : {metrics['f1_score']:.4f}")
+    print(f"\nKarışıklık Matrisi (Confusion Matrix):")
+    print(f"  Gerçek Pozitif  (TP): {metrics['true_positive']}")
+    print(f"  Gerçek Negatif  (TN): {metrics['true_negative']}")
+    print(f"  Yanlış Pozitif  (FP): {metrics['false_positive']}")
+    print(f"  Yanlış Negatif  (FN): {metrics['false_negative']}")
     print(f"{'='*60}\n")
     
     return metrics
@@ -103,8 +103,8 @@ def evaluate_all(model, X_train, y_train, X_val, y_val, X_test, y_test):
         }
         Her iç dictionary, evaluate() fonksiyonunun döndürdüğü formatı içerir.
     """
-    train_metrics = evaluate(model, X_train, y_train, "Training")
-    val_metrics = evaluate(model, X_val, y_val, "Validation")
+    train_metrics = evaluate(model, X_train, y_train, "Eğitim")
+    val_metrics = evaluate(model, X_val, y_val, "Doğrulama")
     test_metrics = evaluate(model, X_test, y_test, "Test")
     
     results = {

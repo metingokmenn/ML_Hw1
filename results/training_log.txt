@@ -1,5 +1,5 @@
 ======================================================================
-Log Dosyası Başlatıldı: 2025-11-22 22:53:09
+Log Dosyası Başlatıldı: 2025-11-23 23:08:46
 Log Yolu: results/training_log.txt
 ======================================================================
 
@@ -23,106 +23,143 @@ Veri dağılım grafiği kaydedildi: results/initial_data_dist.png
 [4/6] Model eğitiliyor (Stochastic Gradient Descent)...
    Bu işlem biraz zaman alabilir...
 
-Epoch 100/1000 - Train Loss: 0.2298, Val Loss: 0.2590
-Epoch 200/1000 - Train Loss: 0.2195, Val Loss: 0.2408
-Epoch 300/1000 - Train Loss: 0.2170, Val Loss: 0.2343
 
-Overfitting tespit edildi! Epoch 343
+Overfitting tespit edildi! Epoch 74
    Validation loss artıyor, training loss azalıyor.
    Patience: 10/10
 
-Early stopping: Epoch 343
+Early stopping: Epoch 74
    Validation loss 10 epoch boyunca iyileşmedi.
-   En iyi model: Epoch 333 (Val Loss: 0.2328)
+   En iyi model: Epoch 64 (Val Loss: 0.3357)
    En iyi model ağırlıklarına geri dönülüyor...
 
 Eğitim tamamlandı!
    Early stopping ile durduruldu.
-   En iyi validation loss: 0.2328 (Epoch 333)
+   En iyi validation loss: 0.3357 (Epoch 64)
    Overfitting tespit edildi: Validation loss artışı gözlemlendi.
 
 [5/6] Loss eğrisi görselleştiriliyor...
 Loss eğrisi grafiği kaydedildi: results/loss_curve.png
    Grafik kaydedildi: results/loss_curve.png
 
-[6/6] Model tüm setler üzerinde değerlendiriliyor...
+[6/8] Model tüm setler üzerinde değerlendiriliyor...
 
 ============================================================
-Training Seti Metrikleri:
+Eğitim Seti Metrikleri:
 ============================================================
-Accuracy  : 0.8667
-Precision : 0.8788
-Recall    : 0.8788
-F1-Score  : 0.8788
+Doğruluk (Accuracy)  : 0.9500
+Kesinlik (Precision) : 0.9444
+Duyarlılık (Recall)  : 0.9714
+F1-Skoru (F1-Score) : 0.9577
 
-Confusion Matrix:
-  True Positive  (TP): 29
-  True Negative  (TN): 23
-  False Positive (FP): 4
-  False Negative (FN): 4
+Karışıklık Matrisi (Confusion Matrix):
+  Gerçek Pozitif  (TP): 34
+  Gerçek Negatif  (TN): 23
+  Yanlış Pozitif  (FP): 2
+  Yanlış Negatif  (FN): 1
 ============================================================
 
 
 ============================================================
-Validation Seti Metrikleri:
+Doğrulama Seti Metrikleri:
 ============================================================
-Accuracy  : 0.9000
-Precision : 1.0000
-Recall    : 0.8333
-F1-Score  : 0.9091
+Doğruluk (Accuracy)  : 0.8000
+Kesinlik (Precision) : 0.8182
+Duyarlılık (Recall)  : 0.8182
+F1-Skoru (F1-Score) : 0.8182
 
-Confusion Matrix:
-  True Positive  (TP): 10
-  True Negative  (TN): 8
-  False Positive (FP): 0
-  False Negative (FN): 2
+Karışıklık Matrisi (Confusion Matrix):
+  Gerçek Pozitif  (TP): 9
+  Gerçek Negatif  (TN): 7
+  Yanlış Pozitif  (FP): 2
+  Yanlış Negatif  (FN): 2
 ============================================================
 
 
 ============================================================
 Test Seti Metrikleri:
 ============================================================
-Accuracy  : 0.9000
-Precision : 1.0000
-Recall    : 0.8667
-F1-Score  : 0.9286
+Doğruluk (Accuracy)  : 0.8500
+Kesinlik (Precision) : 1.0000
+Duyarlılık (Recall)  : 0.7857
+F1-Skoru (F1-Score) : 0.8800
 
-Confusion Matrix:
-  True Positive  (TP): 13
-  True Negative  (TN): 5
-  False Positive (FP): 0
-  False Negative (FN): 2
+Karışıklık Matrisi (Confusion Matrix):
+  Gerçek Pozitif  (TP): 11
+  Gerçek Negatif  (TN): 6
+  Yanlış Pozitif  (FP): 0
+  Yanlış Negatif  (FN): 3
 ============================================================
 
 
-[7/7] Test seti tahminleri görselleştiriliyor...
+[6.5/8] Metrik karşılaştırma grafiği oluşturuluyor...
+Metrik karşılaştırma grafiği kaydedildi: results/metrics_comparison.png
+   Grafik kaydedildi: results/metrics_comparison.png
+
+[7/8] Test seti tahminleri görselleştiriliyor...
 Test tahmin grafiği kaydedildi: results/test_predictions.png
 Confusion matrix grafiği kaydedildi: results/confusion_matrix.png
    Grafikler kaydedildi: results/test_predictions.png, results/confusion_matrix.png
+
+[8/8] Karar sınırı görselleştiriliyor...
+Karar sınırı grafiği kaydedildi: results/decision_boundary.png
+Karar sınırı denklemi:
+Karar Sınırı:
+2.4553·x₁ + 2.2588·x₂ + 0.7371 = 0
+
+Alternatif form:
+x₂ = -1.0870·x₁ + -0.3263
+   Grafik kaydedildi: results/decision_boundary.png
 
 ======================================================================
                     FİNAL ÖZET
 ======================================================================
 
 Eğitim Özeti:
-  • En iyi validation loss: 0.2328 (Epoch 333)
-  • Final training loss: 0.2165
-  • Final validation loss: 0.2331
+  • En iyi validation loss: 0.3357 (Epoch 64)
+  • Final training loss: 0.1977
+  • Final validation loss: 0.3362
   • Overfitting tespit edildi!
 
+======================================================================
+               TÜM SETLER İÇİN METRİKLER
+======================================================================
+
+Eğitim Seti Performansı:
+  • Doğruluk (Accuracy)  : 0.9500
+  • Kesinlik (Precision)  : 0.9444
+  • Duyarlılık (Recall)   : 0.9714
+  • F1-Skoru (F1-Score)   : 0.9577
+
+Doğrulama Seti Performansı:
+  • Doğruluk (Accuracy)  : 0.8000
+  • Kesinlik (Precision) : 0.8182
+  • Duyarlılık (Recall)  : 0.8182
+  • F1-Skoru (F1-Score)  : 0.8182
+
 Test Seti Performansı:
-  • Accuracy: 0.9000
-  • Precision: 1.0000
-  • Recall: 0.8667
-  • F1-Score: 0.9286
+  • Doğruluk (Accuracy)  : 0.8500
+  • Kesinlik (Precision) : 1.0000
+  • Duyarlılık (Recall)  : 0.7857
+  • F1-Skoru (F1-Score)  : 0.8800
+======================================================================
 
 ======================================================================
 Tüm işlemler tamamlandı!
    Grafikler 'results/' klasörüne kaydedildi:
    - initial_data_dist.png: Veri dağılımı
    - loss_curve.png: Loss eğrisi
+   - metrics_comparison.png: Metrik karşılaştırması
    - test_predictions.png: Test tahmin sonuçları
    - confusion_matrix.png: Confusion matrix
+   - decision_boundary.png: Karar sınırı görselleştirmesi
+
+   Karar Sınırı Denklemi:
+   Karar Sınırı:
+2.4553·x₁ + 2.2588·x₂ + 0.7371 = 0
+
+Alternatif form:
+x₂ = -1.0870·x₁ + -0.3263
 ======================================================================
 
 Tüm loglar 'results/training_log.txt' dosyasına kaydedildi.
